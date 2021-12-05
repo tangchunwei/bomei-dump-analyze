@@ -1,25 +1,34 @@
 // vue.config.js
 module.exports = {
-    devServer: {
+  publicPath:'./',
+  outputDir: 'dist',
+  devServer: {
       proxy: {
-        '/': {
+        '/api': {
           target: 'http://test.3000p.com:5005/', //对应自己的接口
           changeOrigin: true,
           ws: true,
           pathRewrite: {
-            '^/': ''
+            '^/api': ''
           }
         }
       },
       disableHostCheck: true,
     },
-    pwa: {
-      iconPaths: {
-          favicon32: 'bitbug_favicon.ico',
-          favicon16: 'bitbug_favicon.ico',
-          appleTouchIcon: 'bitbug_favicon.ico',
-          maskIcon: 'bitbug_favicon.ico',
-          msTileImage: 'bitbug_favicon.ico'
+
+    //webpack配置
+	configureWebpack: {
+    //警告 webpack 的性能提示
+    performance: {
+      hints:'warning',
+      //入口起点的最大体积
+      maxEntrypointSize: 50000000,
+      //生成文件的最大体积
+      maxAssetSize: 30000000,
+      //只给出 js 文件的性能提示
+      assetFilter: function(assetFilename) {
+        return assetFilename.endsWith('.js');
       }
+    }
   }
   }

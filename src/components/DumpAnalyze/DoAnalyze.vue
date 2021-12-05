@@ -20,7 +20,7 @@ export default {
         //   return;
         // }
         let data = {"uuid":localStorage.uuid}
-        axios.post('/analysis',data)
+        axios.post('/api/analysis',data)
              .then(response => {
                 //  console.log(response.data.data[0][0])
                 this.tableData = {

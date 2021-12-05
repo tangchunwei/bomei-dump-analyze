@@ -14,7 +14,7 @@
       </div>
       <el-divider></el-divider>
       <div class="grid-content bg-purple-light">
-        <el-row justify="center" gutter=0>
+        <el-row justify="center">
           <ShowAnalyzeData  :analyzeData="this.analyzeData"/>
         </el-row>
       </div>

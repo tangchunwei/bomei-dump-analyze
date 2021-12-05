@@ -2,7 +2,7 @@
   <el-upload
     ref="my-upload"
     class="upload-demo"
-    action="/upload"
+    action="/api/upload"
     :on-preview="handlePreview"
     :on-success="onSuccess"
     multiple
