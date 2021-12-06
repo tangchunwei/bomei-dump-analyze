@@ -1,7 +1,9 @@
 // vue.config.js
 module.exports = {
-  publicPath:'./',
+  publicPath: process.env.NODE_ENV === 'production'? './': '/',
   outputDir: 'dist',
+  lintOnSave: true,
+  runtimeCompiler: true, //关键点在这
   devServer: {
       proxy: {
         '/api': {

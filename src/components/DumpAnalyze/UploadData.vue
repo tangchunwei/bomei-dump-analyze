@@ -36,6 +36,8 @@ export default {
       )
       //保存文件uuid
       localStorage.uuid = response.uuid;
+      //是否已经提交过请求
+      localStorage.isReq = 0;
       this.$emit('uploadData',response);
       this.$emit('analyzeData','');
       // console.log(response);

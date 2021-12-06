@@ -1,5 +1,7 @@
 <template>
-    <el-button @click="doAnalyze" type="success" size="big">提交分析</el-button>
+  <div id="do_analyze">
+      <el-button @click="doAnalyze" type="success" size="big">提交分析</el-button>
+  </div>
 </template>
 <script setup lang="js">
 import  axios  from "axios";
@@ -15,18 +17,17 @@ export default {
   },
   methods:{
       doAnalyze(){
-        // if(this.tableData.data.length !== 0 ){
-        //   this.$message.error('您已经提交分析，请不要重复提交！！！');
-        //   return;
-        // }
+        if(localStorage.isReq== 1 ){
+          this.$message.error('您已经提交分析，请上传新的文件！！');
+          return;
+        }
         let data = {"uuid":localStorage.uuid}
         axios.post('/api/analysis',data)
              .then(response => {
-                //  console.log(response.data.data[0][0])
-                this.tableData = {
-                    data:[],
-                    system_name:''
-                },
+               if(response.data.data[0][0] == undefined){
+                 this.$message.error('暂无分析数据，请更换dump');
+                  return;
+               }
                  this.tableData.system_name = response.data.data[0][0].rawname
                     response.data.data[0][0].value.forEach((value) => {
                         let obj={};
@@ -36,6 +37,8 @@ export default {
                         obj.other = value.d
                         this.tableData.data.push(obj)
                     });
+                    //标记为已经提交过请求
+                  localStorage.isReq = 1
                 })
         // console.log(this.tableData)
         this.$emit('analyzeData',this.tableData);
