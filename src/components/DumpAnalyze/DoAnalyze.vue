@@ -1,9 +1,9 @@
 <template>
-  <div id="do_analyze">
+  <el-row>
       <el-button @click="doAnalyze" type="success" size="big">提交分析</el-button>
-  </div>
+  </el-row>
 </template>
-<script setup lang="js">
+<script lang="js">
 import  axios  from "axios";
 export default {
   name: 'DoAnalyze',
