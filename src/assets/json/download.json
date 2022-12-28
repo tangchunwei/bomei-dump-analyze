@@ -1,0 +1,63 @@
+{
+    "download": [
+      {
+        "id": 1,
+        "cover": "pic1.jpg",
+        "content": [
+          {
+            "name":"NFC基础版安装包",
+            "url":"http://www.ickashuju.com:666/dowloads/jichu/NFC-122.exe"
+          },
+          {
+            "name":"NFC基础版绿色免安装",
+            "url":"ttp://www.ickashuju.com:666/dowloads/jichu/NFC-122-lvse.exe"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "cover": "pic2.png",
+        "description": "NFC-PRO基础版<br>主要功能：IC全加密",
+        "content": [
+          {
+            "name":"NFC基础版安装包",
+            "url":"http://www.ickashuju.com:666/dowloads/jichu/NFC-122.exe"
+          },
+          {
+            "name":"NFC基础版绿色免安装",
+            "url":"ttp://www.ickashuju.com:666/dowloads/jichu/NFC-122-lvse.exe"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "cover": "pic3.jpeg",
+        "description": "NFC-PRO双频版<br>主要功能：ID+IC+侦测",
+        "content": [
+            {
+              "name":"双频版安装包",
+              "url":"http://www.ickashuju.com:666/dowloads/zhuanye/NFC-PRO-zhuanye.exe"
+            },
+            {
+              "name":"双频版绿色免安装",
+              "url":"http://www.ickashuju.com:666/dowloads/zhuanye/NFC-PRO-lvse.exe"
+            }
+          ]
+      },
+      {
+        "id": 4,
+        "cover": "pic4.jpg",
+        "content": [
+            {
+              "name":"配卡易安装包",
+              "url":"http://www.ickashuju.com:666/dowloads/zhuanye/NFC-PRO-zhuanye.exe"
+            },
+            {
+              "name":"配卡易绿色免安装",
+              "url":"http://www.ickashuju.com:666/dowloads/zhuanye/NFC-PRO-lvse.exe"
+            }
+          ]
+      }
+    ]
+  }
+  

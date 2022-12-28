@@ -1,18 +1,58 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import Index from '../components/Index/Index'
-import AnalyzeIndex from '../components/DumpAnalyze/Index'
-import NfcBaseIndex from '../components/NfcBase/Index'
-import NfcProIndex from '../components/NfcPro/Index'
+import Vue from 'vue'
+import VueRouter from 'vue-router'
+import index from '../views/Index.vue'
+import Notice from '../views/Notice.vue'
+import Instructions from '../views/Instructions.vue'
+import DataAnalysis from '../views/DataAnalysis.vue'
+import Download from '../views/Download.vue'
+import Feedback from '../views/Feedback.vue'
+import NoticeDetail from '../views/NoticeDetail.vue'
+
+Vue.use(VueRouter)
 
 const routes = [
-    { path: '/', component: Index },
-    { path: '/nfc_base', component: NfcBaseIndex },
-    { path: '/nfc_pro', component: NfcProIndex },
-    { path: '/dump_analyze', component: AnalyzeIndex },
+  {
+    path: '/',
+    name: 'index',
+    component: index
+  },
+  {
+    path: '/Notice',
+    name: 'Notice',
+    component: Notice
+  },
+  {
+    path: '/Instructions',
+    name: 'Instructions',
+    component: Instructions
+  },
+  {
+    path: '/Download',
+    name: 'Download',
+    component: Download
+  },
+  {
+    path: '/DataAnalysis',
+    name: 'DataAnalysis',
+    component: DataAnalysis
+  },
+  {
+    path: '/Feedback',
+    name: 'Feedback',
+    component: Feedback
+  },
+  {
+    path: '/NoticeDetail',
+    name: 'NoticeDetail',
+    component: NoticeDetail
+  },
+  
 ]
 
-const router = createRouter({
-    history: createWebHistory(process.env.BASE_URL),
-    routes
+const router = new VueRouter({
+  mode: 'history',
+  base: process.env.BASE_URL,
+  routes
 })
+
 export default router
