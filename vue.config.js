@@ -1,5 +1,5 @@
 
-const BASE_URL = process.env.NODE_ENV === 'production'? '/public': '/';
+const BASE_URL = process.env.NODE_ENV === 'production'? './': '/';
 // vue.config.js
 module.exports = {
   publicPath: BASE_URL,
