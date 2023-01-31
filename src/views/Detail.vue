@@ -1,6 +1,6 @@
 <template>
   <div class="detail">
-    <img :src="`/Instructions/${pic}`" v-for="(pic,index) in getData.detail" :key="index">
+    <img :src="`${publicPath}instructions/${pic}`" v-for="(pic,index) in getData.detail" :key="index">
   </div>
 </template>
 
@@ -8,7 +8,9 @@
 export default {
   components: {},
   data() {
-    return {};
+    return {
+      publicPath: process.env.BASE_URL
+    };
   },
   computed: {
     getData() {

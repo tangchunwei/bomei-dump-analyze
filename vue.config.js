@@ -1,6 +1,8 @@
+
+const BASE_URL = process.env.NODE_ENV === 'production'? '/public': '/';
 // vue.config.js
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production'? './': '/',
+  publicPath: BASE_URL,
   outputDir: 'dist',
   lintOnSave: false,
 
