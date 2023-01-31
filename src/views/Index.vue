@@ -5,7 +5,7 @@
     <section class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".2s">
       <ul>
         <li>
-          <img src="@/assets/index/pic1.jpg" alt="" />
+          <img src="/index/pic1.jpg" alt="" />
           <p>公司创始人参与的行业展会</p>
         </li>
         <li>
@@ -23,11 +23,11 @@
     <section class="wow fadeInUp" data-wow-duration="2s" data-wow-delay=".5s">
       <ul>
         <li>
-          <img src="@/assets/index/pic2.jpg" alt="" />
+          <img src="/index/pic2.jpg" alt="" />
           <p>办公室</p>
         </li>
         <li>
-          <img src="@/assets/index/pic3.jpg" alt="" />
+          <img src="/index/pic3.jpg" alt="" />
           <p>办公室客服部</p>
         </li>
       </ul>
@@ -35,11 +35,11 @@
     <section class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="1s">
       <ul>
         <li>
-          <img src="@/assets/index/pic4.jpg" alt="" />
+          <img src="/index/pic4.jpg" alt="" />
           <p>公司获得的荣誉</p>
         </li>
         <li>
-          <img src="@/assets/index/pic5.jpeg" alt="" />
+          <img src="/index/pic5.jpeg" alt="" />
           <p>行业展会</p>
         </li>
       </ul>

@@ -1,13 +1,14 @@
 <template>
   <div class="Instructions">
-    <section class="wow fadeInUp" v-for="(items, index) in getData" :key="index" data-wow-duration="2s" data-wow-delay=".2s">
+    <section class="wow fadeInUp" v-for="(items, index) in getData" :key="items.id" data-wow-duration="2s" data-wow-delay=".2s">
       <ul>
         <li>
-          <img :src="require(`@/assets/instructions/${items.cover}`)" alt="" />
+          <img :src="require(`/public/instructions/${items.cover}`)" alt="" />
           <p v-html="items.description"></p>
         </li>
         <li>
-          <p class="content" v-for="(video, index) in items.content" :key="index">
+          <p class="content">产品简介 <a @click="toDetail(items,index)"  >：点击查看</a><br></p>
+          <p class="content" v-for="(video,index) in items.content" :key="index">
             {{ video.name }}：<a :href="video.url" target="_blank">点击观看</a>
           </p>
         </li>
@@ -24,10 +25,18 @@ export default {
     return {};
   },
   computed: {
-    getData: () => (require("@/assets/json/Instructions.json") ? require("@/assets/json/Instructions.json").Instructions : ""),
+    getData: () => (require("/public/json/Instructions.json") ? require("/public/json/Instructions.json").Instructions : ""),
   },
   watch: {},
-  methods: {},
+  methods: {
+    toDetail(item,index){
+      if(item.detail.length > 0){
+         this.$router.push({
+        path:`/Detail/${index}`
+      })
+      }
+    }
+  },
   created() {},
   mounted() {
     this.$nextTick(() => {
@@ -67,6 +76,9 @@ export default {
         }
         > p.content {
           text-align: left;
+          a{
+            cursor: pointer;
+          }
         }
       }
     }

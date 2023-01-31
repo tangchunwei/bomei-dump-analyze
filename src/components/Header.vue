@@ -1,13 +1,13 @@
 <template>
   <div id="Header">
     <div class="container">
-      <img src="../assets/header/logo.png" alt="" />
+      <img src="/header/logo.png" alt="" />
       <superslide :options="options" class="slideBox" v-if="isShow">
         <div class="bd">
           <ul id="nav" class="nav clearfix">
             <li class="nLi" :class="{ on: String(router) === 'index' }">
               <h3>
-                <router-link to="/"> 首页 </router-link>
+                <router-link to="/index"> 首页 </router-link>
               </h3>
             </li>
             <li class="nLi" :class="{ on: (String(router) === 'Notice') || (String(router) === 'NoticeDetail') }">
@@ -15,7 +15,7 @@
                 <router-link to="/Notice"> 公告 </router-link>
               </h3>
             </li>
-            <li class="nLi" :class="{ on: String(router) === 'Instructions' }">
+            <li class="nLi" :class="{ on: (String(router) === 'Instructions') || (String(router) === 'Detail')}">
               <h3>
                 <router-link to="/Instructions"> 使用说明 </router-link>
               </h3>

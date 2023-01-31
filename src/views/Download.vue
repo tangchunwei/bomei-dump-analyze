@@ -3,7 +3,7 @@
     <section class="wow fadeInUp" v-for="(items, index) in getData" :key="index" data-wow-duration="2s" data-wow-delay=".2s">
       <ul>
         <li>
-          <img :src="require(`@/assets/instructions/${items.cover}`)" alt="" />
+          <img :src="require(`/public/instructions/${items.cover}`)" alt="" />
           <p v-html="items.description"></p>
         </li>
         <li>
@@ -24,7 +24,7 @@ export default {
     return {};
   },
   computed: {
-    getData: () => (require("@/assets/json/download.json") ? require("@/assets/json/download.json").download : ""),
+    getData: () => (require("/public/json/download.json") ? require("/public/json/download.json").download : ""),
   },
   watch: {},
   methods: {},

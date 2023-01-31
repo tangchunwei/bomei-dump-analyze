@@ -21,7 +21,7 @@ export default {
     return {};
   },
   computed: {
-    getNotice: () => (require("@/assets/json/notice.json") ? require("@/assets/json/notice.json").notice : ""),
+    getNotice: () => (require("/public/json/notice.json") ? require("/public/json/notice.json").notice : ""),
   },
   watch: {},
   methods: {

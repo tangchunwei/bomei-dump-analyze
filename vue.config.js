@@ -2,7 +2,7 @@
 module.exports = {
   publicPath: process.env.NODE_ENV === 'production'? './': '/',
   outputDir: 'dist',
-  lintOnSave: true,
+  lintOnSave: false,
 
   //关键点在这
   runtimeCompiler: true,

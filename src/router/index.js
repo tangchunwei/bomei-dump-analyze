@@ -7,12 +7,13 @@ import DataAnalysis from '../views/DataAnalysis.vue'
 import Download from '../views/Download.vue'
 import Feedback from '../views/Feedback.vue'
 import NoticeDetail from '../views/NoticeDetail.vue'
+import Detail from '@/views/Detail'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '/',
+    path: '/index',
     name: 'index',
     component: index
   },
@@ -46,13 +47,25 @@ const routes = [
     name: 'NoticeDetail',
     component: NoticeDetail
   },
-  
+  {
+    path: '/Detail/:id',
+    name: 'Detail',
+    component: Detail
+  },
+  {
+    path:'*',
+    redirect:'/index'
+  }
 ]
 
 const router = new VueRouter({
   mode: 'hash',
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    // 始终滚动到顶部
+    return { y: 0 }
+  },
 })
 
 export default router

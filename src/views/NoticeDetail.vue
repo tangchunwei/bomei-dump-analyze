@@ -18,7 +18,7 @@ export default {
   computed: {
     getDetail() {
       const index = this.$route.query.index;
-      return require("@/assets/json/notice.json") ? require("@/assets/json/notice.json").notice[index] : "";
+      return require("/public/json/notice.json") ? require("/public/json/notice.json").notice[index] : "";
     },
   },
   watch: {},

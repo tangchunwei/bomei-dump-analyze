@@ -1,7 +1,7 @@
 <template>
   <div class="DataAnalysis">
     <aside  class="wow fadeInLeft" data-wow-duration="2s" data-wow-delay=".2s">
-      <div class="no_data" v-if="rawdata.length <= 0"><img src="@/assets/noData.jpg" alt="" /></div>
+      <div class="no_data" v-if="rawdata.length <= 0"><img src="/noData.jpg" alt="" /></div>
       <div class="show_data" v-for="(item, index) in rawdata" :key="index">
         <p v-if="index % 4 === 0">{{ index / 4 }}扇区:</p>
         {{ item }}
