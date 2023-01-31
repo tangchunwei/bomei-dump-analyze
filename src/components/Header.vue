@@ -92,7 +92,7 @@ export default {
     width: 77.5rem;
     height: 4.5rem;
     margin: 1.875rem auto;
-
+    background: #fff;
     > img {
       height: 100%;
       float: left;
